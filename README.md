@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Local GenAI Search with Ollama
 
 ## Project Overview
@@ -43,3 +44,6 @@ pip install -r req.txt
 ## License
 
 This project is licensed under the Apache License 2.0.  See the LICENSE file for details.
+=======
+# local_search_ollama
+>>>>>>> cb013e3eacfd70353bf7131e9db3d4d39636133d
