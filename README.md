@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Local GenAI Search with Ollama
 
 ## Project Overview
@@ -14,36 +13,57 @@ This project implements a local GenAI search engine leveraging Ollama for model 
 * **User Interface:** Provides a user-friendly interface for querying and viewing results.
 * **Text Preprocessing:** Includes functionality for cleaning and preparing text for indexing.
 
+## Getting started 
 
-## Installation
+### Prerequisites
 
-This project uses `pip` and `virtualenv`.  Ensure you have Python 3.7+ installed.  Create a virtual environment and install the required packages:
+- Python 3.8 or higher
+- Streamlit
+- Ollama (for AI model integration)
+- FAISS (for vector indexing)
 
-```bash
-python -m venv myenv
-source myenv/Scripts/activate  # On Windows: myenv\Scripts\activate.bat
-pip install -r req.txt
-```
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Goodnight77/local_search_ollama.git
+   cd local-genai-search
+2. **Install the required dependencies**:
+   ```bash
+   pip install -r requirements.txt
+3. **Set up Ollama**:
+   Ensure that Ollama is installed and running on your machine. You can download it from [here](https://ollama.com/).
+
+
+
 
 ## Usage
-
-1. **Indexing:**  Index your documents using the `indexing.py` script. You'll need to provide the path to your documents.  Further parameters may be available; consult `indexing.py` for details.  An example might look like:
-
+1. **Run the streamlit app**:
    ```bash
-   python indexing.py --documents_path /path/to/your/documents
-   ```
+   streamlit run main.py
 
-2. **Querying:** Use the main script `main.py` to query the index.  The UI will be launched, allowing you to enter your search terms.
+2. **Index your documents**:
+   Enter the path to your documents folder in the input field.
+   Click on the "🚀 Index Documents" button to start the indexing process.
 
-   ```bash
-   python main.py
-   ```
+3. **Ask Question**:
+   Once the documents are indexed, you can enter your question in the input field and click on the "🔍 Search and Answer"  button.
+   The app will perform a semantic search, generate an AI-based answer, and display the referenced documents.
 
-3. **Answer Generation:** The `answer_generation.py` script handles generating answers from the retrieved documents.
+## File Structure
+
+- `main.py`: The entry point of the application.
+- `ui.py`: Contains the Streamlit UI and main logic.
+- `indexing.py`: Handles document indexing and semantic search.
+- `handlers.py`: Contains functions to read different types of documents (PDF, DOCX, PPTX, TXT).
+- `text_processing.py`: Handles text chunking and embedding.
+- `answer_generation.py`: Generates AI-based answers using Ollama.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or improvements.
 
 ## License
 
 This project is licensed under the Apache License 2.0.  See the LICENSE file for details.
-=======
-# local_search_ollama
->>>>>>> cb013e3eacfd70353bf7131e9db3d4d39636133d
+
